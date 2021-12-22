@@ -40,25 +40,20 @@ def process_submissions(df, path_root):
 
 
 def main(config):
-    logging.info('extracting institutions')
     institutions_df = extract_institutions(path=config['DEFAULT']['institutions_path'])
-    logging.info('extracted institutions')
+    logging.debug('extracted institutions')
 
-    logging.info('extracting submissions')
     submissions_df = extract_submissions(path=config['DEFAULT']['submissions_path'])
-    logging.info('extracted submissions')
+    logging.debug('extracted submissions')
 
-    logging.info('processing institutions')
     process_institutions(df=institutions_df, path_root=config['DEFAULT']['output_root'])
-    logging.info('processed institutions')
+    logging.debug('processed institutions')
 
-    logging.info('processing subjects')
     process_subjects(df=submissions_df, path_root=config['DEFAULT']['output_root'])
-    logging.info('processed subjects')
+    logging.debug('processed subjects')
 
-    logging.info('processing submissions')
     process_submissions(df=submissions_df, path_root=config['DEFAULT']['output_root'])
-    logging.info('processed submissions')
+    logging.debug('processed submissions')
 
 
 if __name__ == '__main__':
