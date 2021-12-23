@@ -30,11 +30,12 @@ def initialise(connection):
 def main():
     logging.info('opening duckdb connection')
     cursor = duckdb.connect()
-    logging.info('opened duckdb connection')
 
     logging.info('creating initial resources')
     initialise(connection=cursor)
-    logging.info('created initial resources')
+
+    show_tables_sql = 'show tables;'
+    execute_query(connection=cursor, query_string=show_tables_sql, print_result=True)
 
     logging.info('opening shell')
     while True:
