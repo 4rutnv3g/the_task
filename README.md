@@ -36,6 +36,7 @@ done a totally different way using a cloud-native stack.
 - much more flexibility in general
 - containerise
 - deploy
+- proper git practices
 - logging level configurable
 - summary metrics??
 - catch and log errors
