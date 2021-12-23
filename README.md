@@ -28,6 +28,8 @@ would be essential developments but a little out of scope here. I have also ment
 that I would not advocate deploying this particular solution; if I had plans to deploy this to the cloud it would be
 done a totally different way using a cloud-native stack.
 
+The SQL for creating the views can be viewed in `src/initialise.sql` and `src/analyse.sql`
+
 ### Future Work
 
 - clearer/better interface
