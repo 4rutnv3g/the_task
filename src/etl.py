@@ -59,7 +59,7 @@ def main(config):
 if __name__ == '__main__':
 
     config = configparser.ConfigParser()
-    config.read('etl.cfg')
+    config.read('src/etl.cfg')
 
     module_name = __file__.split('/')[-1]
 
